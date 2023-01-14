@@ -1,0 +1,25 @@
+{
+    "releaseName":"release 1.0.0",
+    "releaseVersion": "1.0.0.1",
+    "plannedReleaseDate":"12/01/2023",
+    "releasePackage": false,
+    "preReleaseRunBook": "https://my-release-notes/1001",
+    "postReleaseRunBook": "",
+    "packages": [                 
+        {
+            "name": "sf-model",
+            "version": "1.1.0.2",
+            "sequence": 1
+        },
+        {
+            "name": "sf-marketing",
+            "version": "1.39.0.3",
+            "sequence": 2
+        },
+        {
+            "name": "sf-sales",
+            "version": "1.56.0.4",
+            "sequence": 3
+        }              
+    ] 
+}

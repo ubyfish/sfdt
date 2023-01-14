@@ -1,0 +1,52 @@
+#This pipeline builds sfdt 
+
+name: 'Release' 
+
+on: 
+  push:
+    branches:
+      - master
+      - develop
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
+      - 'decision records/**'
+  
+  workflow_dispatch:
+
+jobs: 
+  build:
+    name: 'build packages'
+    uses: ./.github/workflows/buildPackage.yml
+    with: 
+      version: ${{ github.ref }}
+      publish: true
+      environment: build
+    secrets: 
+      npm-token: ${{ secrets.NPM_TOKEN }}
+    concurrency: 
+      group: build
+
+  beta:
+    name: 'sfdt beta'
+    uses: ./.github/workflows/promotePackage.yml
+    with:
+      version: 'beta'
+      pathToPackageJson: 'package.json'
+      environment: sfdt-beta
+    secrets:
+      npm-token: ${{ secrets.NPM_TOKEN }}
+    if: ${{ github.ref == 'refs/heads/develop' }}
+    needs: build 
+
+  prod:
+    name: 'sfdt prod'
+    uses: ./.github/workflows/promotePackage.yml
+    with:
+      version: 'latest'
+      pathToPackageJson: 'package.json'
+      environment: sfdt-prod
+    secrets:
+      npm-token: ${{ secrets.NPM_TOKEN }}
+    if: ${{ always() && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/develop' && needs.beta.result == 'success')  }}
+    needs: beta
