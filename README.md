@@ -1,3 +1,6 @@
+  
+  [![NPM](https://img.shields.io/npm/v/sfdt.svg)](https://www.npmjs.com/package/sfdt) ![npm (tag)](https://img.shields.io/npm/v/sfdt/beta)
+
   <!-- toc -->
 * [sfdt](#sfdt)
 * [Setup](#setup)
@@ -6,23 +9,24 @@
 <!-- tocstop -->
 
 # sfdt
+
 salesforce package utils - for working with unlocked packages
 
 ## install
-
+```
   sfdx plugins:install sfdt
-
+```
 
 # Setup
-
+```
   yarn build
 
   yarn prepack
 
   sfdx plugins link
-
+```
 # Examples
-
+```
   sfdx sfdt:up:info -v devhub -n sf-core -m 1.1.0.1 -b
 
   sfdx sfdt:release:report -v devhub -u sandbox1 --releaseplan ./examples/releasePlan.json
@@ -32,7 +36,7 @@ salesforce package utils - for working with unlocked packages
   sfdx sfdt:project:info -v devhub -u sandbox1
 
   sfdx sfdt:up:version:latest -v devhub -n sf-sales -s
-
+```
 
 <!-- install -->
 <!-- usage -->
