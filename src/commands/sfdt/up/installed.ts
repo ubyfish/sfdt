@@ -33,7 +33,7 @@ export default class Installed extends SfdxCommand {
     }),
     exactmatch: flags.boolean({
       char: 'e',
-      description: messages.getMessage('nameFlagDescription'),required: false,
+      description: messages.getMessage('exactFlagDescription'),required: false,
       dependsOn: ['name'],
     })    
   };

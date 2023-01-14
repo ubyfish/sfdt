@@ -40,7 +40,7 @@ export default class ScratchOrgUtils {
         getSFDXCommand+=' --json';
         console.log('created command : ' + getSFDXCommand);
 
-        //let result = child_process.execSync(getSFDXCommand, { stdio: 'pipe' });
+    
         let result = child_process.execSync(getSFDXCommand,{
             encoding: 'utf8',
         });
@@ -64,7 +64,7 @@ export default class ScratchOrgUtils {
             encoding: 'utf8',
         });
         const passObject = JSON.parse(passresult);
-        //console.log(JSON.stringify(passObject))
+        
         scratchOrg.password = passObject.result.password;
     
         //Get Sfdx Auth URL

@@ -77,19 +77,8 @@ export default class NewScratch extends SfdxCommand {
         configPath = './config/scratch-org-config/project-scratch-def.json';
     }
     let scratchOrg: ScratchOrg = await ScratchOrgUtils.createScratchOrg(adminEmail, configPath, durationDays, this.hubOrg, sendEmail ,orgAlias);
-    //--TESTING--
-    // let scratchOrg: ScratchOrg = {
-    //     "alias": "pin3",
-    //     "orgId": "00D0C0000001PFqUAM",
-    //     "username": "test-tvczwuobaqzv@example.com",
-    //     "signupEmail": "test-example@yoyo.com",
-    //     "loginURL": "https://power-customization-1604-dev-ed.my.salesforce.com/",
-    //     "password": "&T9ztdkbumzsj",
-    //     "sfdxAuthUrl": "force://PlatformCLI::5Aep861fPbvNTL_1vvx1uRJzz11bxIA3MMY4Tn_sIkkC8wfm8dpix6Uj1f2kjF_VMOa0E5IONtijqjShz_n84KJ@power-customization-1604-dev-ed.my.salesforce.com"
-    // };
+
     if(sendEmail){
-        //--TESTING--
-        //ScratchOrgUtils.shareScratchOrgThroughEmail('test-example@yoyo.com',scratchOrg,this.hubOrg,defaultPkg.name);
         ScratchOrgUtils.shareScratchOrgThroughEmail(adminEmail,scratchOrg,this.hubOrg,defaultPkg.name);
     }
     

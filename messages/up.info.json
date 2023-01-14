@@ -1,14 +1,15 @@
 {
-  "commandDescription": "Get the latest package version info",
+  "commandDescription": "Get the unlocked package info but id, version or the list of beta versions",
   "nameFlagDescription": "name of the package",
   "versionNumberFlagDescription": "pacakge version number e.g. 1.1.1.1",
   "versionIdByFlagDescription": "package version id 04t....",
-  "allBetasFlagDescription": "when supplied all beta versions of the package version will be returned - e.g. 1.1.0.1,1.1.0.2,1.1.0.2 ",
+  "allBetasFlagDescription": "based on symantic versioing, when supplied all beta versions will be returned for the supplied version - e.g. 1.1.0.1,1.1.0.2,1.1.0.2 ",
   "orgDepFlagDescription": "show the dev hub dependency versions",
   "errorNoOrgResults": "No results found for the package '%s' and version '%s'",
   "examples": [
     "sfdt:up:info --name my-core-pkg --targetdevhubusername devhub@org.com --versionnumber 1.28.0.1",
-    "sfdt:up:info --name my-core-pkg --targetdevhubusername devhub@org.com versionId 04txxxxxxxxxxx",
-    "sfdt:up:info --name my-core-pkg --targetdevhubusername devhub@org.com --versionnumber 1.28.0.1 -b"
+    "sfdt:up:info --name my-core-pkg --targetdevhubusername devhub@org.com -m 1.28.0.1 -o",
+    "sfdt:up:info --name my-core-pkg --targetdevhubusername devhub@org.com --versionId 04txxxxxxxxxxx",
+    "sfdt:up:info --name my-core-pkg --targetdevhubusername devhub@org.com -m 1.28.0.1 -b"
   ]
 }

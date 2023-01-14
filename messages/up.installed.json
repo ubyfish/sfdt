@@ -1,11 +1,13 @@
 {
-  "commandDescription": "Table view of installed packages in an org. can be filtered by supplied name",
-  "nameFlagDescription": "name of the package",
+  "commandDescription": "Table view of installed packages in an org. Can be filtered by supplied name",
+  "nameFlagDescription": "name (or partial name) to filter resulsts by",
+  "exactFlagDescription": "exactly match the mame supplied",
   "errorNoOrgResults": "No results found for org %s",
   "errorManyResults": "Could not filter Packages to specific version in %s",
   "errorGeneric": "Failed to get installed pacakge infor. Error : %s",
   "examples": [
     "sfdt:up:installed --targetusername devhub@org.com",
-    "sfdt:up:installed --name my-core-pkg --targetusername devhub@org.com"
+    "sfdt:up:installed --name sf-core --targetusername devhub@org.com",
+    "sfdt:up:installed --name sf-core --exactmatch --targetusername devhub@org.com"
   ]
 }

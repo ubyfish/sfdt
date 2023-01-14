@@ -1,5 +1,5 @@
 {
-  "commandDescription": "Gets the Package information for this project from the target Org. Useful for getting tag information",
+  "commandDescription": "Allows you to check / fetch info about the packages in a project and what version info is in the target org",
   "errorNoOrgResults": "No results found for the packages in org '%s'",
   "errorManyOrgResults": "Many results found for the packages in org '%s'",
   "examples": [

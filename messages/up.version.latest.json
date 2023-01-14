@@ -1,12 +1,12 @@
 {
-  "commandDescription": "Get the latest package version info",
-  "nameFlagDescription": "name of the package",
-  "orderByFlagDescription": "Version or CreatedDate",
-  "releasedFlagDescription": "relased packaged only",
-  "showVersionsFlagDescription": "Verbosly shows the versions in order retrieved",
+  "commandDescription": "Get the latest unlocked package version info",
+  "nameFlagDescription": "Name of the package",
+  "releasedFlagDescription": "Filter and show Promoted/Relased packaged only",
+  "showVersionsFlagDescription": "Verbosly shows the package versions in order retrieved",
   "errorNoOrgResults": "No results found for the package '%s'.",
   "examples": [
-    "sfdt:up:version:latest --name my-core-pkg --targetdevhubusername devhub@org.com",
-    "sfdt:up:version:latest --name my-core-pkg --targetdevhubusername devhub@org.com --released"
+    "sfdt:up:version:latest --name sf-core --targetdevhubusername devhub@org.com",
+    "sfdt:up:version:latest --name sf-core --targetdevhubusername devhub@org.com",
+    "sfdt:up:version:latest --name sf-core --targetdevhubusername devhub@org.com --showversions"
   ]
 }

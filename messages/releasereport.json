@@ -1,6 +1,6 @@
 {
-  "commandDescription": "Generate some report info from a releasePlan.json definition. If you supply targetusername it checks the org if installed ",
-  "releaseplanFlagDescription": "supply the location of a valid releasePlan.json",
+  "commandDescription": "Generate some report info from a releasePlan.json definition. If you supply targetusername, the report checks if the release packages are installed in the target org",
+  "releaseplanFlagDescription": "The location of a valid releasePlan.json (see example for format). It not supplied, it looks for it in the running directory",
   "errorNoOrgResults": "No release plan found or invalid for %s",
   "examples": [
     "sfdt:release:report --targetdevhubusername PROD --targetusername QA1",
