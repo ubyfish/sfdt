@@ -1,7 +1,7 @@
 {
   "name": "sfdt",
   "description": "Salesforce devops tools",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Craig Bradshaw @ubyfish",
   "bugs": "https://github.com/ubyfish/sfdt/issues",
   "dependencies": {
