@@ -10,7 +10,7 @@
 
 # sfdt
 
-salesforce package utils - for working with unlocked packages
+salesforce devops tools - for working with salesforce unlocked packages via sfdx cli
 
 ## install
 ```
